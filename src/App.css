@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+  
+}
+
+body{
+  background-color: rgb(210, 227, 241);
+}
+
+.navbarDes {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: lightblue;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  
+}
+.cards {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  margin: 10px;
+  border-color: blue;
+}
+.card .card-link-wrapper {
+  margin-top: auto;
+}
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+.cards::-webkit-scrollbar-thumb {
+  background: var(--darkred);
+}
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.navbarDes{
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: 0%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.product-container{
+	display: grid;
+	background-color: transparent;
+  	grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
+	grid-auto-rows: auto;
+	padding:0px;
+	grid-gap: 0px;
+	justify-content: center;
+	grid-auto-flow: dense;
+	height: 100vh;
+	width: 100vw;
+	
+}
+
+.addButton {
+  background-color:rgb(66, 66, 211);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: .4s;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: white;
+  color: black;
+  border-color: blue;
+}
+
+.savedList {
+  list-style-type: none;
+}
+
+.buttonList {
+  margin-left: 5px;
+  background-color:rgb(66, 66, 211);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: .4s;
+  cursor: pointer;
+}
+
+.list2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.list{
+  /* width: 100px; */
+  height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* background-color: pink; */
+  border: 1px solid black;
+  margin: 10px;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.listsContainer{
+  /* background-color: red; */
+  grid-template-columns: repeat(auto-fit, minmax(125px, 2fr));
+	grid-auto-rows: auto;
+	padding:0px;
+	grid-gap: 0px;
+	justify-content: center;
+	grid-auto-flow: dense;
+	height: 100vh;
+	width: 100vw;
+}
